@@ -1,31 +1,46 @@
 {
-  "name": "trading_jouring",
+  "name": "trading_journey",
   "version": "1.0.0",
-  "description": "CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure. More information can be found at the [official site](https://codeigniter.com).",
+  "description": "Trading Journey system built on CodeIgniter 4, Vue 2, Bootstrap-Vue, and Axios.",
   "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "php spark serve --port 8181",
     "sass": "sass --watch _dev/sass:public/src/css --style=compressed",
     "copy-to-pub": "copy-files-from-to --when-file-exists overwrite"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chiwenda100/trading_jouring.git"
+    "url": "git+https://github.com/chiwenda100/trading_journey.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/chiwenda100/trading_jouring/issues"
+    "url": "https://github.com/chiwenda100/trading_journey/issues"
   },
-  "homepage": "https://github.com/chiwenda100/trading_jouring#readme",
+  "homepage": "https://github.com/chiwenda100/trading_journey#readme",
   "dependencies": {
-    "axios": "^1.13.2",
-    "sass": "^1.93.3"
-  }
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "axios": "^1.2.2",
+    "bootstrap": "^4.6.2",
+    "bootstrap-vue": "^2.23.1",
+    "copy-files-from-to": "^3.12.1",
+    "jquery": "^3.7.1",
+    "vue": "^2.7.16",
+    "sass": "^1.80.3"
+  },
+  "copyFilesSettings": [
+    {
+      "whenFileExists": "overwrite",
+      "ignoreDotFilesAndFolders": false
+    }
+  ],
+  "copyFiles": [
+    { "from": "node_modules/axios/dist/**/*", "to": "public/node_modules/axios/" },
+    { "from": "node_modules/vue/dist/**/*", "to": "public/node_modules/vue/" },
+    { "from": "node_modules/bootstrap-vue/dist/**/*", "to": "public/node_modules/bootstrap-vue/" },
+    { "from": "node_modules/bootstrap/dist/**/*", "to": "public/node_modules/bootstrap/" },
+    { "from": "node_modules/@fortawesome/**/*", "to": "public/node_modules/@fortawesome/" },
+    { "from": "node_modules/jquery/dist/**/*", "to": "public/node_modules/jquery/" }
+  ]
 }
