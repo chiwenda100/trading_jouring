@@ -7,7 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "php spark serve --port 8181",
+    "sass": "sass --watch _dev/sass:public/src/css --style=compressed",
+    "copy-to-pub": "copy-files-from-to --when-file-exists overwrite"
   },
   "repository": {
     "type": "git",
